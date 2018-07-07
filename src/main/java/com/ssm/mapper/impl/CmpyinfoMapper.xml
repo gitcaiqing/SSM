@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mapper.CmpyinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.ssm.entity.Cmpyinfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="qydm" property="qydm" jdbcType="VARCHAR" />
+    <result column="wxid" jdbcType="VARCHAR" property="wxid" />
+    <result column="jgdm" property="jgdm" jdbcType="VARCHAR" />
+    <result column="gnum" property="gnum" jdbcType="VARCHAR" />
+    <result column="gname" property="gname" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="jtname" property="jtname" jdbcType="VARCHAR" />
+    <result column="orgcode" property="orgcode" jdbcType="VARCHAR" />
+    <result column="logoimg" property="logoimg" jdbcType="VARCHAR" />
+    <result column="sysname" property="sysname" jdbcType="VARCHAR" />
+    <result column="cmpname" property="cmpname" jdbcType="VARCHAR" />
+    <result column="cmpalias" property="cmpalias" jdbcType="VARCHAR" />
+    <result column="linkman" property="linkman" jdbcType="VARCHAR" />
+    <result column="tel" property="tel" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="county" property="county" jdbcType="VARCHAR" />
+    <result column="addr" property="addr" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="validdate" property="validdate" jdbcType="TIMESTAMP" />
+    <result column="memo" property="memo" jdbcType="VARCHAR" />
+    <result column="credate" property="credate" jdbcType="TIMESTAMP" />
+    <result column="upddate" property="upddate" jdbcType="TIMESTAMP" />
+    <result column="userId" property="userid" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="addrconfig" property="addrconfig" jdbcType="INTEGER" />
+    <result column="wxconfig" property="wxconfig" jdbcType="INTEGER" />
+    <result column="user_work_set" property="userWorkSet" jdbcType="INTEGER" />
+    <result column="jobc_user_set" property="jobcUserSet" jdbcType="INTEGER" />
+    <result column="jobc_scheme_set" property="jobcSchemeSet" jdbcType="INTEGER" />
+	<result column="prize_set" property="prizeSet" jdbcType="VARCHAR" />
+    <result column="minbonus" property="minbonus" jdbcType="INTEGER" />
+    <result column="maxbonus" property="maxbonus" jdbcType="INTEGER" />
+    <result column="deftype" property="deftype" jdbcType="VARCHAR" />
+    <result column="cmpy_set" property="cmpySet" jdbcType="INTEGER" />
+    <result column="netstatus" property="netstatus" jdbcType="INTEGER" />
+    <result column="netcount" property="netcount" jdbcType="INTEGER" />
+    <result column="netcontent" property="netcontent" jdbcType="VARCHAR" />
+    <result column="enetcontent" property="enetcontent" jdbcType="VARCHAR" />
+    
+     <result column="secstatus" property="secstatus" jdbcType="INTEGER" />
+    <result column="secnetcontent" property="secnetcontent" jdbcType="VARCHAR" />
+    <result column="secenetcontent" property="secenetcontent" jdbcType="VARCHAR" />
+    
+    <result column="msgnum" property="msgnum" jdbcType="INTEGER" />
+    <result column="spmsgnum" property="spmsgnum" jdbcType="INTEGER" />
+    <result column="jglogoimg" property="jglogoimg" jdbcType="VARCHAR" />
+    <result column="jgsysname" property="jgsysname" jdbcType="VARCHAR" />
+    
+    <result column="kfqq" property="kfqq" jdbcType="VARCHAR" />
+    <result column="kftel" property="kftel" jdbcType="VARCHAR" />
+    <result column="kfwx" property="kfwx" jdbcType="VARCHAR" />
+    <result column="kfwximg" property="kfwximg" jdbcType="VARCHAR" />
+    <result column="supname" property="supname" jdbcType="VARCHAR" />
+    <result column="supurl" property="supurl" jdbcType="VARCHAR" />
+    
+    <result column="reviewway" property="reviewway" jdbcType="INTEGER" />
+    
+    <result column="sigstatus" property="sigstatus" jdbcType="INTEGER" />
+    <result column="signum" property="signum" jdbcType="INTEGER" />
+    
+    <result column="remarkstatus" property="remarkstatus" jdbcType="INTEGER" />
+    <result column="personalIndex" property="personalIndex" jdbcType="VARCHAR" />
+    <result column="psindexSet" property="psindexSet" jdbcType="INTEGER" />
+    <result column="pspwdSet" property="pspwdSet" jdbcType="INTEGER" />
+    
+    <result column="somequestion" property="somequestion" jdbcType="VARCHAR" />
+    
+    <result column="secret" property="secret" jdbcType="VARCHAR" />
+    <result column="appid" property="appid" jdbcType="VARCHAR" />
+    <result column="mchid" property="mchid" jdbcType="VARCHAR" />
+    <result column="appsecretBusiness" property="appsecretBusiness" jdbcType="VARCHAR" />
+    <result column="isexplain" property="isexplain" jdbcType="INTEGER" />
+    <result column="isprei" property="isprei" jdbcType="INTEGER" />
+    <result column="systype" property="systype" jdbcType="INTEGER" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    id, qydm, wxid, jgdm, gnum, gname, type,jtname, orgcode, logoimg,sysname, cmpname, cmpalias, linkman, tel, email, province, 
+    city, county, addr,status, validdate, memo, credate, upddate,userId,username, addrconfig, wxconfig, user_work_set,
+    jobc_user_set,jobc_scheme_set, prize_set, minbonus, maxbonus, deftype,cmpy_set,netstatus,netcount,netcontent,enetcontent,msgnum,spmsgnum,jglogoimg,jgsysname,
+    kfqq,kftel,kfwx,kfwximg,supname,supurl,kfqq,kftel,kfwx,kfwximg,supname,supurl,reviewway,sigstatus,signum,remarkstatus,personalIndex,psindexSet,pspwdSet,
+    secstatus,secnetcontent,secenetcontent,secret,appid,mchid,appsecretBusiness,isexplain,isprei, systype
+  </sql>
+  
+  
+  <!-- 根据主键id获取数据 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_basic_cmpyinfo
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  
+  <!-- 新增记录-->
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="com.ssm.entity.Cmpyinfo" >
+    insert into tb_basic_cmpyinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="qydm != null" >
+        qydm,
+      </if>
+      <if test="wxid != null" >
+        wxid,
+      </if>
+      <if test="jgdm != null" >
+        jgdm,
+      </if>
+      <if test="gnum != null" >
+        gnum,
+      </if>
+      <if test="gname != null" >
+        gname,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="jtname != null" >
+        jtname,
+      </if>
+      <if test="orgcode != null" >
+        orgcode,
+      </if>
+      <if test="logoimg != null" >
+        logoimg,
+      </if>
+      <if test="sysname != null" >
+        sysname,
+      </if>
+      <if test="jglogoimg != null" >
+        jglogoimg,
+      </if>
+      <if test="jgsysname != null" >
+        jgsysname,
+      </if>
+      <if test="cmpname != null" >
+        cmpname,
+      </if>
+      <if test="cmpalias != null" >
+        cmpalias,
+      </if>
+      <if test="linkman != null" >
+        linkman,
+      </if>
+      <if test="tel != null" >
+        tel,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="province != null" >
+        province,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="county != null" >
+        county,
+      </if>
+      <if test="addr != null" >
+        addr,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="validdate != null" >
+        validdate,
+      </if>
+      <if test="memo != null" >
+        memo,
+      </if>
+      <if test="credate != null" >
+        credate,
+      </if>
+      <if test="upddate != null" >
+        upddate,
+      </if>
+      <if test="userid != null" >
+        userId,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="addrconfig != null" >
+        addrconfig,
+      </if>
+      <if test="wxconfig != null" >
+        wxconfig,
+      </if>
+      <if test="userWorkSet != null" >
+        user_work_set,
+      </if>
+      <if test="jobcUserSet != null" >
+        jobc_user_set,
+      </if>
+      <if test="jobcSchemeSet != null" >
+        jobc_scheme_set,
+      </if>
+      <if test="prizeSet != null and prizeSet != '' ">
+      	prize_set,
+      </if>
+      <if test="minbonus != null" >
+        minbonus,
+      </if>
+      <if test="maxbonus != null" >
+        maxbonus,
+      </if>
+      <if test="deftype != null" >
+        deftype,
+      </if>
+      <if test="cmpySet != null" >
+        cmpy_set,
+      </if>
+      <if test="netstatus != null" >
+        netstatus,
+      </if>
+      <if test="netcount != null" >
+        netcount,
+      </if>
+      <if test="netcontent != null" >
+        netcontent,
+      </if>
+      <if test="enetcontent != null" >
+        enetcontent,
+      </if>
+      <if test="msgnum != null" >
+        msgnum,
+      </if>
+      <if test="spmsgnum != null" >
+        spmsgnum,
+      </if>
+      <if test="kfqq != null" >
+        kfqq,
+      </if>
+      <if test="kftel != null" >
+        kftel,
+      </if>
+      <if test="kfwx != null" >
+        kfwx,
+      </if>
+      <if test="kfwximg != null" >
+        kfwximg,
+      </if>
+      <if test="supname != null" >
+        supname,
+      </if>
+      <if test="supurl != null" >
+        supurl,
+      </if>
+      <if test="reviewway != null" >
+        reviewway,
+      </if>
+      
+      <if test="sigstatus != null" >
+        sigstatus,
+      </if>
+      <if test="signum != null" >
+        signum,
+      </if>
+      <if test="remarkstatus != null" >
+        remarkstatus,
+      </if>
+      <if test="personalIndex != null" >
+        personalIndex,
+      </if>
+      <if test="psindexSet != null" >
+        psindexSet,
+      </if>
+      <if test="pspwdSet != null" >
+        pspwdSet,
+      </if>
+      
+      <if test="secstatus != null" >
+        secstatus,
+      </if>
+      <if test="secnetcontent != null" >
+        secnetcontent,
+      </if>
+      <if test="secenetcontent != null" >
+        secenetcontent,
+      </if>
+      
+      <if test="secret != null" >
+        secret,
+      </if>
+      <if test="appid != null" >
+        appid,
+      </if>
+      <if test="mchid != null" >
+        mchid,
+      </if>
+      <if test="appsecretBusiness != null" >
+        appsecretBusiness,
+      </if>
+      <if test="isexplain != null" >
+        isexplain,
+      </if>
+      <if test="isprei != null" >
+        isprei,
+      </if>
+      <if test="systype != null" >
+        systype
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="qydm != null" >
+        #{qydm,jdbcType=VARCHAR},
+      </if>
+      <if test="wxid != null" >
+        #{wxid,jdbcType=VARCHAR},
+      </if>
+      <if test="jgdm != null" >
+        #{jgdm,jdbcType=VARCHAR},
+      </if>
+      <if test="gnum != null" >
+        #{gnum,jdbcType=VARCHAR},
+      </if>
+      <if test="gname != null" >
+        #{gname,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="jtname != null" >
+        #{jtname,jdbcType=INTEGER},
+      </if>
+      <if test="orgcode != null" >
+        #{orgcode,jdbcType=VARCHAR},
+      </if>
+      
+      <if test="logoimg != null" >
+        #{logoimg,jdbcType=VARCHAR},
+      </if>
+      <if test="sysname != null" >
+        #{sysname,jdbcType=VARCHAR},
+      </if>
+      
+      <if test="jglogoimg != null" >
+        #{jglogoimg,jdbcType=VARCHAR},
+      </if>
+      <if test="jgsysname != null" >
+        #{jgsysname,jdbcType=VARCHAR},
+      </if>
+      
+      <if test="cmpname != null" >
+        #{cmpname,jdbcType=VARCHAR},
+      </if>
+      <if test="cmpalias != null" >
+        #{cmpalias,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null" >
+        #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null" >
+        #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null" >
+        #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="addr != null" >
+        #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="validdate != null" >
+        #{validdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="credate != null" >
+        #{credate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="upddate != null" >
+        #{upddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="addrconfig != null" >
+        #{addrconfig,jdbcType=INTEGER},
+      </if>
+      <if test="wxconfig != null" >
+        #{wxconfig,jdbcType=INTEGER},
+      </if>
+      <if test="userWorkSet != null" >
+        #{userWorkSet,jdbcType=INTEGER},
+      </if>
+      <if test="jobcUserSet != null" >
+        #{jobcUserSet,jdbcType=INTEGER},
+      </if>
+      <if test="jobcSchemeSet != null" >
+       #{jobcSchemeSet,jdbcType=INTEGER},
+      </if>
+      <if test="prizeSet != null and prizeSet != '' " >
+       #{prizeSet,jdbcType=INTEGER},
+      </if>
+      <if test="minbonus != null" >
+        #{minbonus,jdbcType=INTEGER},
+      </if>
+      <if test="maxbonus != null" >
+        #{maxbonus,jdbcType=INTEGER},
+      </if>
+      <if test="deftype != null" >
+        #{deftype,jdbcType=VARCHAR},
+      </if>
+      <if test="cmpySet != null" >
+        #{cmpySet,jdbcType=INTEGER},
+      </if>
+      <if test="netstatus != null" >
+        #{netstatus,jdbcType=INTEGER},
+      </if>
+      <if test="netcount != null" >
+        #{netcount,jdbcType=INTEGER},
+      </if>
+      <if test="netcontent != null" >
+        #{netcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="enetcontent != null" >
+        #{enetcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="msgnum != null" >
+      	#{msgnum,jdbcType=INTEGER},
+      </if>
+      <if test="spmsgnum != null" >
+      	#{spmsgnum,jdbcType=INTEGER},
+      </if>
+      <if test="kfqq != null" >
+        #{kfqq,jdbcType=VARCHAR},
+      </if>
+      <if test="kftel != null" >
+        #{kftel,jdbcType=VARCHAR},
+      </if>
+      <if test="kfwx != null" >
+        #{kfwx,jdbcType=VARCHAR},
+      </if>
+      <if test="kfwximg != null" >
+        #{kfwximg,jdbcType=VARCHAR},
+      </if>
+      <if test="supname != null" >
+        #{supname,jdbcType=VARCHAR},
+      </if>
+      <if test="supurl != null" >
+        #{supurl,jdbcType=VARCHAR},
+      </if>
+      <if test="reviewway != null" >
+        #{reviewway,jdbcType=INTEGER},
+      </if>
+      <if test="sigstatus != null" >
+        #{sigstatus,jdbcType=INTEGER},
+      </if>
+      <if test="signum != null" >
+        #{signum,jdbcType=INTEGER},
+      </if>
+      <if test="remarkstatus != null" >
+        #{remarkstatus,jdbcType=INTEGER},
+      </if>
+      <if test="personalIndex != null" >
+        #{personalIndex,jdbcType=VARCHAR},
+      </if>
+      <if test="psindexSet != null" >
+        #{psindexSet,jdbcType=INTEGER},
+      </if>
+      <if test="pspwdSet != null" >
+        #{pspwdSet,jdbcType=INTEGER},
+      </if>
+      
+      <if test="secstatus != null" >
+         #{secstatus,jdbcType=INTEGER},
+      </if>
+      <if test="secnetcontent != null" >
+        #{secnetcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="secenetcontent != null" >
+        #{secenetcontent,jdbcType=VARCHAR},
+      </if>
+      
+      <if test="secret != null" >
+        #{secret,jdbcType=VARCHAR},
+      </if>
+      <if test="appid != null" >
+        #{appid,jdbcType=VARCHAR},
+      </if>
+      <if test="mchid != null" >
+        #{mchid,jdbcType=VARCHAR},
+      </if>
+      <if test="appsecretBusiness != null" >
+        #{appsecretBusiness,jdbcType=VARCHAR},
+      </if>
+      <if test="isexplain != null" >
+        #{isexplain,jdbcType=INTEGER},
+      </if>
+      <if test="isprei != null" >
+        #{isprei,jdbcType=INTEGER},
+      </if>
+      <if test="systype != null" >
+        #{systype,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  
+  <!-- 更新记录 -->
+  <update id="updateByPrimaryKeySelective" parameterType="com.ssm.entity.Cmpyinfo" >
+    update tb_basic_cmpyinfo
+    <set >
+      <if test="qydm != null" >
+        qydm = #{qydm,jdbcType=VARCHAR},
+      </if>
+      <if test="wxid != null" >
+        wxid = #{wxid,jdbcType=VARCHAR},
+      </if>
+      <if test="jgdm != null" >
+        jgdm = #{jgdm,jdbcType=VARCHAR},
+      </if>
+      <if test="gnum != null" >
+        gnum = #{gnum,jdbcType=VARCHAR},
+      </if>
+      <if test="gname != null" >
+        gname = #{gname,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="jtname != null" >
+        jtname = #{jtname,jdbcType=VARCHAR},
+      </if>
+      <if test="orgcode != null" >
+        orgcode = #{orgcode,jdbcType=VARCHAR},
+      </if>
+      <if test="logoimg != null" >
+        logoimg = #{logoimg,jdbcType=VARCHAR},
+      </if>
+      <if test="sysname != null" >
+        sysname = #{sysname,jdbcType=VARCHAR},
+      </if>
+      <if test="jglogoimg != null" >
+        jglogoimg = #{jglogoimg,jdbcType=VARCHAR},
+      </if>
+      <if test="jgsysname != null" >
+        jgsysname = #{jgsysname,jdbcType=VARCHAR},
+      </if>
+      <if test="cmpname != null" >
+        cmpname = #{cmpname,jdbcType=VARCHAR},
+      </if>
+      <if test="cmpalias != null" >
+        cmpalias = #{cmpalias,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null" >
+        linkman = #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null" >
+        tel = #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="county != null" >
+        county = #{county,jdbcType=VARCHAR},
+      </if>
+      <if test="addr != null" >
+        addr = #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="validdate != null" >
+        validdate = #{validdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="memo != null" >
+        memo = #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="credate != null" >
+        credate = #{credate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="upddate != null" >
+        upddate = #{upddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userid != null" >
+        userId = #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="addrconfig != null" >
+        addrconfig = #{addrconfig,jdbcType=INTEGER},
+      </if>
+      <if test="wxconfig != null" >
+        wxconfig = #{wxconfig,jdbcType=INTEGER},
+      </if>
+      <if test="userWorkSet != null" >
+        user_work_set = #{userWorkSet,jdbcType=INTEGER},
+      </if>
+      <if test="jobcUserSet != null" >
+        jobc_user_set = #{jobcUserSet,jdbcType=INTEGER},
+      </if>
+      <if test="jobcSchemeSet != null" >
+        jobc_scheme_set = #{jobcSchemeSet,jdbcType=INTEGER},
+      </if>
+      <if test="prizeSet != null and prizeSet != '' ">
+        prize_set = #{prizeSet,jdbcType=VARCHAR},
+      </if>
+      <if test="minbonus != null" >
+        minbonus = #{minbonus,jdbcType=INTEGER},
+      </if>
+      <if test="maxbonus != null" >
+        maxbonus = #{maxbonus,jdbcType=INTEGER},
+      </if>
+      <if test="deftype != null" >
+        deftype = #{deftype,jdbcType=VARCHAR},
+      </if>
+      <if test="cmpySet != null" >
+        cmpy_set = #{cmpySet,jdbcType=INTEGER},
+      </if>
+      <if test="netstatus != null" >
+       netstatus = #{netstatus,jdbcType=INTEGER},
+      </if>
+      <if test="netcount != null" >
+       netcount = #{netcount,jdbcType=INTEGER},
+      </if>
+      <if test="netcontent != null" >
+       netcontent = #{netcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="enetcontent != null" >
+       enetcontent = #{enetcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="secret != null" >
+        secret = #{secret,jdbcType=VARCHAR},
+      </if>
+      <if test="appid != null" >
+        appid = #{appid,jdbcType=VARCHAR},
+      </if>
+      <if test="mchid != null" >
+        mchid = #{mchid,jdbcType=VARCHAR},
+      </if>
+      <if test="appsecretBusiness != null" >
+        appsecretBusiness = #{appsecretBusiness,jdbcType=VARCHAR},
+      </if>
+      <if test="msgnum != null" >
+      	msgnum = #{msgnum,jdbcType=INTEGER},
+      </if>
+      <if test="spmsgnum != null">
+      	spmsgnum = #{spmsgnum,jdbcType=INTEGER},
+      </if>
+      <if test="kfqq != null" >
+       kfqq = #{kfqq,jdbcType=VARCHAR},
+      </if>
+      <if test="kftel != null" >
+       kftel = #{kftel,jdbcType=VARCHAR},
+      </if>
+      <if test="kfwx != null" >
+       kfwx = #{kfwx,jdbcType=VARCHAR},
+      </if>
+      <if test="kfwximg != null" >
+       kfwximg = #{kfwximg,jdbcType=VARCHAR},
+      </if>
+      <if test="supname != null" >
+       supname = #{supname,jdbcType=VARCHAR},
+      </if>
+      <if test="supurl != null" >
+       supurl = #{supurl,jdbcType=VARCHAR},
+      </if>
+      <if test="reviewway != null" >
+       	reviewway = #{reviewway,jdbcType=INTEGER},
+       </if>
+       
+       <if test="sigstatus != null" >
+       	sigstatus = #{sigstatus,jdbcType=INTEGER},
+       </if>
+       <if test="signum != null" >
+       	signum = #{signum,jdbcType=INTEGER},
+       </if>
+       <if test="remarkstatus != null" >
+       	remarkstatus = #{remarkstatus,jdbcType=INTEGER},
+       </if>
+       <if test="addrconfig != null" >
+        addrconfig = #{addrconfig,jdbcType=INTEGER},
+      </if>
+      <if test="wxconfig != null" >
+        wxconfig = #{wxconfig,jdbcType=INTEGER},
+      </if>
+      <if test="personalIndex != null" >
+        personalIndex = #{personalIndex,jdbcType=VARCHAR},
+      </if>
+      <if test="psindexSet != null" >
+        psindexSet = #{psindexSet,jdbcType=INTEGER},
+      </if>
+       <if test="pspwdSet != null" >
+        pspwdSet = #{pspwdSet,jdbcType=INTEGER},
+      </if>
+      
+      <if test="secstatus != null" >
+         secstatus=#{secstatus,jdbcType=INTEGER},
+      </if>
+      <if test="secnetcontent != null" >
+       secnetcontent=#{secnetcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="secenetcontent != null" >
+       secenetcontent= #{secenetcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="isexplain != null" >
+       isexplain= #{isexplain,jdbcType=INTEGER},
+      </if>
+      <if test="isprei != null" >
+       isprei= #{isprei,jdbcType=INTEGER},
+      </if>
+      <if test="systype != null" >
+       systype= #{systype,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <!-- 根据主键id删除数据 -->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_basic_cmpyinfo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+</mapper>
